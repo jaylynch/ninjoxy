@@ -1,0 +1,20 @@
+{
+  "name": "ninjoxy",
+  "version": "0.0.0",
+  "description": "Node.js Content Injecting HTTP Proxy Server",
+  "keywords": [
+    "http",
+    "proxy"
+  ],
+  "homepage": "http://www.github.com/jaylynch/ninjoxy/",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://jaylynch.mit-license.org/"
+    }
+  ],
+  "author": {
+    "name": "Jay Lynch",
+    "url": "http://jaylyn.ch"
+  }
+}
