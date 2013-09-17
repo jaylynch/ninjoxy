@@ -1,10 +1,15 @@
 var http = require('http')
 
-var LISTEN_IP = '127.0.0.1';
+var LISTEN_IP = '0.0.0.0';
 var LISTEN_PORT = 80;
 
-http.createServer(function(req, res) {
-  console.log(req.headers);
+http.createServer(function(req, res) { 
+  console.log(req.headers); 
+  console.log('\n');
+  if ('accept-encoding' in req.headers) {
+    delete req.headers['accept-encoding'];
+  }
+  
   var options = {
     hostname: req.headers.host,
     port: LISTEN_PORT,
@@ -26,3 +31,4 @@ http.createServer(function(req, res) {
 }).listen(LISTEN_PORT, LISTEN_IP);
 
 console.log('Server running at http://' + LISTEN_IP + ':' + LISTEN_PORT + '/');
+
